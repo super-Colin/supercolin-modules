@@ -1,18 +1,15 @@
 /* - */
 /* header-splash-image */
-
 :root{
     --header-splash-image__title-wrapper__side-padding: var(--main-layout-spacing);
     --header-splash-image__title-wrapper__bg-opacity: 0.4; /* 0 for no shading on image */
 
     --header-splash-image__title__color: var(--white-FFF);
-    --header-splash-image__title__font-size: 2.5rem;/* 36px */
+    --header-splash-image__title__font-size: 2.5rem;/* 40px */
     --header-splash-image__title__font-family: var(--font-family__metropolis);
 
-    --header-spash-image__max-height: 85vh;
-
+    --header-spash-image__max-height: 75vh;
 }
-
 
 .header-splash-image{
     position: relative;
@@ -42,40 +39,29 @@
     background-color: rgba(0,0,0, var(--header-splash-image__title-wrapper__bg-opacity));
     padding: 0 var(--header-splash-image__title-wrapper__side-padding);
 }
+
 .header-splash-image__title{
     font-family: var(--header-splash-image__title__font-family);
     font-size: var(--header-splash-image__title__font-size);
     font-weight: 900;
     color: var(--header-splash-image__title__color);
 }
-.header-splash-image__title__emphasis{
-    font-family: var(--header-splash-image__title__emphasis__font-family);
-    font-weight: var(--header-splash-image__title__emphasis__font-weight);
-    font-style: italic;
-}
+
 
 @media(min-width: 720px){
     :root{
-        --header-splash-image__title-wrapper__side-padding: var(--main-layout-spacing);
-        --header-splash-image__title__font-size: 2.25rem; /* 40px */
+        --header-splash-image__title__font-size: 2.75rem; /* 44px */
     }
 }
-
-
 @media(min-width: 1020px){
     :root{
-        --header-splash-image__title-wrapper__side-padding: var(--main-layout-spacing);
-        --header-splash-image__title__font-size: 2.625rem; /* 40px */
+        --header-splash-image__title__font-size: 3rem; /* 48px */
     }
 }
-
-
 @media(min-width: 1320px){
     :root{
-        --header-splash-image__title-wrapper__side-padding: var(--main-layout-spacing);
-        --header-splash-image__title__font-size: 3rem; /* 40px */
+        --header-splash-image__title__font-size: 3.25rem; /* 52px */
     }
 }
-
 /* - */
 /* /header-splash-image */
