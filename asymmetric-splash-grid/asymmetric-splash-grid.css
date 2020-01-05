@@ -1,0 +1,166 @@
+/* - */
+/* asymmetric-splash-grid */
+:root{
+    --asymmetric-splash-grid__gutters: var(--main-layout-spacing);
+
+    --asymmetric-splash-grid__vertical-padding: calc( var(--asymmetric-splash-grid__gutters) * .5);
+    --asymmetric-splash-grid__horizontal-padding: calc( var(--asymmetric-splash-grid__gutters) * .5);
+
+    --asymmetric-splash-grid__border-radius: var(--asymmetric-splash-grid__gutters);
+	--asymmetric-splash-grid__border-radius: calc( var(--asymmetric-splash-grid__gutters) * .5 );
+	
+	--asymmetric-splash-grid__font-family: var(--brand-main__font-family);
+	--asymmetric-splash-grid__title__font-family: var(--brand-second__font-family);
+}
+
+.asymmetric-splash-grid{
+	padding: var(--asymmetric-splash-grid__gutters) 0 1px 0;
+	background-color: darkmagenta;
+	/* background: linear-gradient( 178deg, var(--brand-main__color) 0%, #e15411 85%, rgb(0,0,0) 100% ); */
+	background-color: var(--brand-main__color);
+}
+
+/* -- asymmetric-splash-grid__splash-container -- */
+.asymmetric-splash-grid__splash-container{
+	background-color: #ccc;
+	/* margin-top: 1px; */
+	margin-bottom: var(--asymmetric-splash-grid__gutters);
+	padding: var(--asymmetric-splash-grid__vertical-padding) var(--asymmetric-splash-grid__horizontal-padding);
+}
+.asymmetric-splash-grid__splash-container img{
+	display: block;
+	object-fit: cover;
+	object-position: top;
+	width: 100%;
+	height: 100%;
+	max-height: 75vh;
+	border-radius: calc( var(--asymmetric-splash-grid__border-radius) / 2 );
+}
+.asymmetric-splash-grid__splash-container__full-image{
+    padding: 0;
+}
+.asymmetric-splash-grid__splash-container__full-image.asymmetric-splash-grid__splash-container__left img{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.asymmetric-splash-grid__splash-container__full-image.asymmetric-splash-grid__splash-container__right img{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.asymmetric-splash-grid__splash-container__full-image.asymmetric-splash-grid__splash-container__full img{
+	border-radius: 0;
+}
+
+/* -- asymmetric-splash-grid__splash-container__title -- */
+.asymmetric-splash-grid__splash-container__title{
+	display: inline-block;
+	font-size: var(--font-size__h3);
+	font-weight: bold;
+	font-family: var(--asymmetric-splash-grid__title__font-family);
+
+	padding-bottom: calc( var(--asymmetric-splash-grid__gutters) / 2 );
+	border-bottom: 2px solid var(--brand-main__color);
+	margin: 0 0 calc( var(--asymmetric-splash-grid__gutters) / 2 );
+}
+
+/* -- asymmetric-splash-grid__splash-container__text -- */
+.asymmetric-splash-grid__splash-container p,
+.asymmetric-splash-grid__splash-container__text{
+    margin: 0;
+	margin-bottom: calc( var(--asymmetric-splash-grid__gutters) / 2 ) ;
+	font-size: var(--font-size__p);
+	font-family: var(--asymmetric-splash-grid__font-family);
+}
+
+/* .asymmetric-splash-grid__splash-container p:last-child,
+.asymmetric-splash-grid__splash-container__text:last-child{
+	margin-bottom: 0;
+} */
+.asymmetric-splash-grid__splash-container > *:last-child{
+	margin-bottom: 0;
+}
+
+/* -- asymmetric-splash-grid__splash-container__full -- */
+.asymmetric-splash-grid__splash-container__full{
+	width:100%;
+	text-align: center;
+}
+
+/* -- asymmetric-splash-grid__splash-container_center -- */
+
+.asymmetric-splash-grid__splash-container__center{
+    margin-left: var(--asymmetric-splash-grid__gutters);
+    margin-right: var(--asymmetric-splash-grid__gutters);
+	text-align: center;
+	border-radius: var(--asymmetric-splash-grid__border-radius);
+}
+
+/* -- asymmetric-splash-grid__splash-container border radius for center *"floated"* containers -- */
+.asymmetric-splash-grid__splash-container__center img{
+    border-radius: calc( var(--asymmetric-splash-grid__border-radius) / 2 );
+}
+
+.asymmetric-splash-grid__splash-container__left{
+	margin-right: var(--asymmetric-splash-grid__gutters);
+	text-align: right;
+	border-radius:0 var(--asymmetric-splash-grid__border-radius) var(--asymmetric-splash-grid__border-radius) 0;
+}
+
+/* -- asymmetric-splash-grid__splash-container border radius for right *"floated"* containers -- */
+
+.asymmetric-splash-grid__splash-container__right{
+	margin-left: var(--asymmetric-splash-grid__gutters);
+	border-radius: var(--asymmetric-splash-grid__border-radius) 0 0 var(--asymmetric-splash-grid__border-radius) ;
+}
+
+/* -- asymmetric-splash-grid__splash-container__double -- */
+.asymmetric-splash-grid__splash-container__half-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.asymmetric-splash-grid__splash-container__half-width{
+	display: inline-block;
+	width: 100%;
+	flex-grow: 1;
+}
+.asymmetric-splash-grid__splash-container__half-width:nth-child(odd),
+.asymmetric-splash-grid__splash-container__half-width:nth-child(odd) img{
+    text-align: right;
+    border-radius:0 var(--asymmetric-splash-grid__border-radius) var(--asymmetric-splash-grid__border-radius) 0;
+}
+.asymmetric-splash-grid__splash-container__half-width:nth-child(odd){
+	margin-right: calc( var(--asymmetric-splash-grid__gutters) * .5 );
+}
+.asymmetric-splash-grid__splash-container__half-width:nth-child(even),
+.asymmetric-splash-grid__splash-container__half-width:nth-child(even) img{
+    border-radius:var(--asymmetric-splash-grid__border-radius) 0 0 var(--asymmetric-splash-grid__border-radius);
+}
+.asymmetric-splash-grid__splash-container__half-width:nth-child(even){
+	margin-left: calc( var(--asymmetric-splash-grid__gutters) * .5 );
+}
+
+
+@media(max-width: 600px){
+	.asymmetric-splash-grid__splash-container__half-wrapper{
+		flex-wrap: wrap;
+		flex-wrap: wrap-reverse;
+	}
+	.asymmetric-splash-grid__splash-container__half-width:nth-child(odd),
+	.asymmetric-splash-grid__splash-container__half-width:nth-child(odd) img{
+		width: 100%;
+	    margin-right: var(--asymmetric-splash-grid__gutters);
+	}
+	.asymmetric-splash-grid__splash-container__half-width:nth-child(even){
+		width: 100%;
+	    margin-left: var(--asymmetric-splash-grid__gutters);
+	}
+}
+
+@media(min-width: 1020px){
+	.asymmetric-splash-grid__splash-container__title{
+		border-bottom: 3px solid var(--brand-main__color);
+	}
+}
+
+/* - */
+/* /asymmetric-splash-grid */
