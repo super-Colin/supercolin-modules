@@ -1,0 +1,41 @@
+/* */
+/* vertical_ticker v1.0.0 */
+
+
+:root{
+    --vertical_ticker: 0;
+    --module__something: 0;
+}
+
+
+#vertical-ticker{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.vertical-ticker__span{
+    display: inline-block;
+    width: 50%;
+    text-align:right;
+}
+
+#vertical-ticker__ul{
+    position: relative;
+    display: inline-block;
+    width:50%;
+    margin-left: .25em;
+    overflow-y: hidden;
+}
+#vertical-ticker__ul li{
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    transition-duration: 400ms;
+    top: 5em;
+    overflow:hidden;
+    width:0;
+}
+
+/* */
+/* /vertical_ticker */
