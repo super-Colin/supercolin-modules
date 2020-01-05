@@ -13,3 +13,4 @@ acf_register_block(array(
     'keywords'			=> array( 'full-width', 'image' ),
 ));
 
+?>

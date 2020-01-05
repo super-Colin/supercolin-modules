@@ -59,7 +59,7 @@
 
 </div> 
 
-<?php wp_enqueue_style( 'asymmetric-splash-grid__base-style', get_template_directory_uri() . '/template-parts/supercolin-modules/supercolin-modules__base-styles.css'); ?>
+<?php wp_enqueue_style( 'supercolin-modules__base-styles', get_template_directory_uri() . '/template-parts/supercolin-modules/supercolin-modules__base-styles.css'); ?>
 <?php wp_enqueue_style( 'asymmetric-splash-grid__style', get_template_directory_uri() . '/template-parts/supercolin-modules/asymmetric-splash-grid/asymmetric-splash-grid.css'); ?>
 
 <!-- -->
